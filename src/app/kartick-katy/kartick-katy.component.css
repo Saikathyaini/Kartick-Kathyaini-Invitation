@@ -65,8 +65,16 @@ transform:translate(-50%,-50%);
 
 /* COUPLE NAME */
 
-.hero-text h1{
-font-size:15px;
+.couple-names{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px; /* space between names */
+}
+
+.couple-names span{
+font-family: 'Brush Script MT', cursive;
+font-size:28px;
 color:#eae3bb;
 
 text-shadow:
@@ -74,6 +82,11 @@ text-shadow:
 2px -2px 0 #000,
 -2px 2px 0 #000,
 2px 2px 0 #000;
+}
+
+.heart{
+font-size:22px;
+color:#eae3bb;
 }
 
 /* INVITE SECTION */
@@ -179,6 +192,9 @@ font-style:italic;
 /* MOBILE RESPONSIVE */
 
 @media(max-width:768px){
+    .couple-names span{
+font-size:24px;
+}
 
 .hero-image{
 background-position: center center;
