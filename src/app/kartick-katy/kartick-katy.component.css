@@ -15,7 +15,7 @@ background-size: cover;
 background-color: #ffffff;
 background-position: center bottom;
 background-repeat: no-repeat;
-
+background-attachment: fixed;
 position: relative;
 overflow: hidden;
 /* display:flex;
@@ -199,6 +199,7 @@ font-size:24px;
 
 .hero-image{
     min-height: 70vh;
+    background-attachment: scroll;
 background-position: center top;
 }
 
