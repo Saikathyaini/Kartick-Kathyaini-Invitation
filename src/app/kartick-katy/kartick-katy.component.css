@@ -52,7 +52,8 @@ overflow-x:hidden;
 height:100vh;
 width:100%;
 
-background-image:url('/assets/mera.jpeg');
+background-image:url('../../assets/mera.jpeg');
+
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
@@ -60,8 +61,6 @@ background-attachment:fixed;
 
 position:relative;
 overflow:hidden;
-
-animation:zoomBg 10s ease-in-out forwards;
 }
 
 @keyframes zoomBg{
@@ -132,24 +131,150 @@ text-shadow:
 
 /* ---------------- INVITE SECTION ---------------- */
 
-.invite-section{
-padding:40px 20px;
-text-align:center;
-background:#f5f5f3e1;
-font-size:24px;
+/* ---------------- INVITE SECTION ---------------- */
 
-opacity:0;
-animation:fadeIn 2s ease forwards;
-animation-delay:2.5s;
+.invite-section{
+
+padding:100px 20px;
+
+text-align:center;
+
+background:linear-gradient(
+180deg,
+#fffaf2 0%,
+#f6ead1 50%,
+#efe1c1 100%
+);
+
+font-family:"Cinzel", serif;
+
+position:relative;
+overflow:hidden;
+
+}
+
+
+/* MANDALA BACKGROUND */
+
+.invite-section::before{
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:600px;
+height:600px;
+
+background:url("/assets/mandala.jpg") center no-repeat;
+background-size:contain;
+
+opacity:0.05;
+
+pointer-events:none;
+}
+
+
+/* GANESH IMAGE */
+
+.ganesh{
+
+width:120px;
+
+margin-bottom:25px;
+
+filter:drop-shadow(0px 6px 8px rgba(0,0,0,0.25));
+
+animation:ganeshFloat 4s ease-in-out infinite;
+
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes ganeshFloat{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+
+}
+
+
+/* TEXT */
+
+.invite-section p{
+
+font-size:22px;
+
+color:#4a3a1a;
+
+line-height:1.8;
+
+margin:10px 0;
+
+}
+
+
+/* INVITE TITLE */
+
+.invite-section h1{
+
+font-size:48px;
+
+color:#8b0000;
+
+letter-spacing:6px;
+
+margin:20px 0;
+
+font-weight:600;
+
+}
+
+
+/* GOLD DECORATION */
+
+.invite-section h1::after{
+
+content:"✦ ✦ ✦";
+
+display:block;
+
+color:#c89b3c;
+
+font-size:18px;
+
+margin-top:10px;
+
+letter-spacing:12px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.invite-section{
+padding:80px 20px;
 }
 
 .invite-section h1{
-font-size:40px;
-letter-spacing:4px;
-color:#8b0000;
-margin-bottom:20px;
+font-size:36px;
 }
 
+.invite-section p{
+font-size:18px;
+}
+
+.ganesh{
+width:90px;
+}
+
+}
 
 /* ---------------- GANESH IMAGE ---------------- */
 
@@ -668,4 +793,88 @@ max-width:320px;
 font-size:32px;
 }
 
+}
+
+.petals{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.petals span{
+position:absolute;
+display:block;
+width:18px;
+height:18px;
+background:#f7c5c5;
+border-radius:50% 50% 50% 0;
+opacity:0.7;
+animation:petalFall 12s linear infinite;
+}
+
+.petals span:nth-child(1){left:10%; animation-duration:10s;}
+.petals span:nth-child(2){left:30%; animation-duration:12s;}
+.petals span:nth-child(3){left:50%; animation-duration:9s;}
+.petals span:nth-child(4){left:70%; animation-duration:14s;}
+.petals span:nth-child(5){left:90%; animation-duration:11s;}
+
+@keyframes petalFall{
+0%{transform:translateY(-50px) rotate(0deg);}
+100%{transform:translateY(100vh) rotate(360deg);}
+}
+.countdown{
+text-align:center;
+padding:80px 20px;
+background:#fff8e7;
+}
+
+.timer{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+}
+
+.timer div{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+font-size:18px;
+}
+
+.timer span{
+display:block;
+font-size:32px;
+color:#8b0000;
+font-weight:bold;
+}
+.invite-section h1{
+position:relative;
+}
+
+.invite-section h1::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:200px;
+height:200px;
+
+background:radial-gradient(circle,#f7e7a0 0%,transparent 70%);
+
+opacity:0.3;
+animation:sparkle 4s infinite ease-in-out;
+}
+
+@keyframes sparkle{
+0%{opacity:0.2; transform:translate(-50%,-50%) scale(1);}
+50%{opacity:0.5; transform:translate(-50%,-50%) scale(1.2);}
+100%{opacity:0.2; transform:translate(-50%,-50%) scale(1);}
 }
