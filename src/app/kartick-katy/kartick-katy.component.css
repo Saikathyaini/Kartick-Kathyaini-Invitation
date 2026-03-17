@@ -6,13 +6,10 @@ top:0;
 left:0;
 width:100%;
 height:100vh;
-
 background:#fff8e7;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 z-index:9999;
 cursor:pointer;
 }
@@ -68,12 +65,8 @@ animation:zoomBg 10s ease-in-out forwards;
 }
 
 @keyframes zoomBg{
-0%{
-transform:scale(1);
-}
-100%{
-transform:scale(1.05);
-}
+0%{transform:scale(1);}
+100%{transform:scale(1.05);}
 }
 
 
@@ -230,12 +223,203 @@ transform:translateY(0);
 }
 
 
+/* ---------------- FAMILY SECTION ---------------- */
+
+.family-section{
+padding:90px 20px;
+text-align:center;
+background:linear-gradient(180deg,#f8f3e6 0%,#efe6d3 100%);
+position:relative;
+overflow:hidden;
+}
+
+
+/* MANDALA BACKGROUND */
+
+.family-section::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:700px;
+height:700px;
+background:url("/assets/mandala.jpg") center no-repeat;
+background-size:contain;
+opacity:0.08;
+z-index:0;
+}
+
+
+/* FAMILY TITLE */
+
+.family-section h2{
+position:relative;
+z-index:2;
+font-size:40px;
+color:#8b0000;
+margin-bottom:60px;
+letter-spacing:3px;
+font-family:"Cinzel", serif;
+}
+
+
+/* GOLD DIVIDER UNDER TITLE */
+
+.family-section h2::after{
+content:"✦ ✦ ✦";
+display:block;
+color:#c89b3c;
+font-size:16px;
+margin-top:10px;
+letter-spacing:10px;
+}
+
+
+/* FAMILY CONTAINER */
+
+.family-container{
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
+position:relative;
+z-index:2;
+}
+
+
+/* FAMILY CARD */
+
+.family-block{
+padding:40px 35px;
+width:320px;
+border-radius:14px;
+
+background:linear-gradient(
+135deg,
+#f7e7b6,
+#d4af37,
+#f7e7b6
+);
+
+box-shadow:0 10px 35px rgba(0,0,0,0.18);
+transition:0.4s;
+color:#3a2a00;
+position:relative;
+}
+
+
+/* GOLD SHIMMER BORDER */
+
+.family-block::before{
+content:"";
+position:absolute;
+top:-2px;
+left:-2px;
+right:-2px;
+bottom:-2px;
+border-radius:16px;
+
+background:linear-gradient(
+120deg,
+#c89b3c,
+#f7e6a2,
+#c89b3c,
+#f7e6a2
+);
+
+background-size:300% 300%;
+animation:goldShimmer 6s linear infinite;
+z-index:-1;
+}
+
+
+/* SHIMMER ANIMATION */
+
+@keyframes goldShimmer{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
+/* HOVER EFFECT */
+
+.family-block:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 45px rgba(0,0,0,0.25);
+}
+
+
+/* GROOM / BRIDE TITLE */
+
+.family-block h3{
+color:#8b0000;
+font-size:22px;
+letter-spacing:2px;
+margin-bottom:10px;
+font-family:"Cinzel", serif;
+}
+
+
+/* NAME */
+
+.family-block .name{
+font-size:28px;
+font-family:"Brush Script MT", cursive;
+color:#c62828;
+margin:10px 0 18px 0;
+}
+
+
+/* TEXT */
+
+.family-block p{
+font-size:18px;
+line-height:1.6;
+color:#333;
+}
+
+.family-block strong{
+font-size:19px;
+color:#000;
+}
+
+
+/* ---------------- GOLDEN DIVIDER ---------------- */
+
+.gold-divider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+margin:60px auto;
+width:100%;
+max-width:500px;
+position:relative;
+}
+
+.gold-divider::before,
+.gold-divider::after{
+content:"";
+flex:1;
+height:1px;
+background:linear-gradient(to right, transparent, #c8913a, transparent);
+}
+
+.gold-divider span{
+color:#c8913a;
+font-size:18px;
+}
+
+
 /* ---------------- MOBILE RESPONSIVE ---------------- */
 
 @media(max-width:768px){
-    .hero-text{
-        top: 30%;
-    }
+
+.hero-text{
+top:30%;
+}
 
 .hero-image{
 background-attachment:scroll;
@@ -261,6 +445,19 @@ font-size:18px;
 
 .footer{
 font-size:18px;
+}
+
+.family-container{
+gap:40px;
+}
+
+.family-block{
+width:90%;
+max-width:320px;
+}
+
+.family-section h2{
+font-size:32px;
 }
 
 }
