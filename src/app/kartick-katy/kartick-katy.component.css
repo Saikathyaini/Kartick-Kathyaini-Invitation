@@ -41,7 +41,7 @@ font-size:18px;
 /* ---------------- MAIN PAGE ---------------- */
 
 .main-page{
-font-family: Georgia, serif;
+font-family:Georgia, serif;
 overflow-x:hidden;
 }
 
@@ -49,27 +49,18 @@ overflow-x:hidden;
 /* ---------------- HERO SECTION ---------------- */
 
 .hero-image{
+
 height:100vh;
 width:100%;
 
 background-image:url('../../assets/mera.jpeg');
-
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
-background-attachment:fixed;
 
 position:relative;
 overflow:hidden;
 }
-
-@keyframes zoomBg{
-0%{transform:scale(1);}
-100%{transform:scale(1.05);}
-}
-
-
-/* ---------------- HERO TEXT ---------------- */
 
 .hero-text{
 position:absolute;
@@ -79,480 +70,88 @@ transform:translate(-50%,-50%);
 text-align:center;
 color:white;
 text-shadow:2px 2px 10px black;
-
-opacity:0;
-animation:floatUp 3s ease forwards;
 }
 
-@keyframes floatUp{
-0%{
-opacity:0;
-transform:translate(-50%,-20%);
-}
-100%{
-opacity:1;
-transform:translate(-50%,-50%);
-}
-}
-.hero-text h3{
-font-size:26px;
-color:#f5e7b8;
 
-text-shadow:
-0px 2px 6px rgba(0,0,0,0.7);
+/* COUPLE NAMES */
 
-margin-bottom:10px;
-}
-
-/* ---------------- COUPLE NAMES ---------------- */
 .couple-names{
 display:flex;
 justify-content:center;
 align-items:center;
 gap:12px;
-letter-spacing:1px;
 }
+
 .couple-names span{
 font-family:'Brush Script MT', cursive;
-font-size:32px;
+font-size:34px;
 color:#f5e7b8;
-
-text-shadow: 
-0px 2px 6px rgba(0,0,0,0.6);
+text-shadow:0 3px 6px rgba(0,0,0,0.6);
 }
+
 .heart{
 font-size:26px;
 color:#f5e7b8;
-
-text-shadow:
-0px 2px 6px rgba(0,0,0,0.6);
 }
 
-
-/* ---------------- INVITE SECTION ---------------- */
 
 /* ---------------- INVITE SECTION ---------------- */
 
 .invite-section{
 
 padding:100px 20px;
-
 text-align:center;
 
 background:linear-gradient(
 180deg,
-#fffaf2 0%,
-#f6ead1 50%,
-#efe1c1 100%
+#fffaf2,
+#f6ead1,
+#efe1c1
 );
 
 font-family:"Cinzel", serif;
-
 position:relative;
 overflow:hidden;
-
 }
-
-
-/* MANDALA BACKGROUND */
 
 .invite-section::before{
 content:"";
-
 position:absolute;
-
 top:50%;
 left:50%;
-
 transform:translate(-50%,-50%);
-
 width:600px;
 height:600px;
-
-background:url("/assets/mandala.jpg") center no-repeat;
+background:url('../../assets/mandala.jpg') center no-repeat;
 background-size:contain;
-
 opacity:0.05;
-
-pointer-events:none;
 }
-
-
-/* GANESH IMAGE */
 
 .ganesh{
-
 width:120px;
-
-margin-bottom:25px;
-
-filter:drop-shadow(0px 6px 8px rgba(0,0,0,0.25));
-
-animation:ganeshFloat 4s ease-in-out infinite;
-
+margin-bottom:20px;
 }
-
-/* FLOAT ANIMATION */
-
-@keyframes ganeshFloat{
-
-0%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
-100%{transform:translateY(0);}
-
-}
-
-
-/* TEXT */
-
-.invite-section p{
-
-font-size:22px;
-
-color:#4a3a1a;
-
-line-height:1.8;
-
-margin:10px 0;
-
-}
-
-
-/* INVITE TITLE */
 
 .invite-section h1{
-
 font-size:48px;
-
-color:#8b0000;
-
 letter-spacing:6px;
-
+color:#8b0000;
 margin:20px 0;
-
-font-weight:600;
-
 }
-
-
-/* GOLD DECORATION */
 
 .invite-section h1::after{
-
 content:"✦ ✦ ✦";
-
 display:block;
-
 color:#c89b3c;
-
 font-size:18px;
-
 margin-top:10px;
-
-letter-spacing:12px;
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.invite-section{
-padding:80px 20px;
-}
-
-.invite-section h1{
-font-size:36px;
+letter-spacing:10px;
 }
 
 .invite-section p{
-font-size:18px;
-}
-
-.ganesh{
-width:90px;
-}
-
-}
-
-/* ---------------- GANESH IMAGE ---------------- */
-
-.ganesh{
-width:260px;
-height:auto;
-display:block;
-margin:0 auto 20px auto;
-
-opacity:0;
-animation:ganeshFade 2s ease forwards;
-animation-delay:1.5s;
-}
-
-@keyframes ganeshFade{
-0%{
-opacity:0;
-transform:scale(0.8);
-}
-100%{
-opacity:1;
-transform:scale(1);
-}
-}
-
-
-/* ---------------- DETAILS SECTION ---------------- */
-/* ---------------- WEDDING DETAILS SECTION ---------------- */
-
-.details{
-padding:110px 20px;
-text-align:center;
-
-background:linear-gradient(
-135deg,
-#f9e7a4,
-#e5c46b,
-#f9e7a4
-);
-
-font-family:"Cinzel", serif;
-position:relative;
-overflow:hidden;
-}
-
-/* subtle royal pattern */
-
-.details::before{
-content:"";
-position:absolute;
-
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-
-width:600px;
-height:600px;
-
-background:url("/assets/mandala.jpg") center no-repeat;
-background-size:contain;
-
-opacity:0.06;
-pointer-events:none;
-}
-
-
-/* ---------------- SECTION TITLES ---------------- */
-
-.details h2{
-font-size:40px;
-color:#8b0000;
-
-letter-spacing:4px;
-
-margin-top:30px;
-margin-bottom:20px;
-
-position:relative;
-}
-
-
-/* GOLD DECORATION */
-
-.details h2::after{
-content:"✦ ✦ ✦";
-display:block;
-
-color:#c89b3c;
-
-font-size:18px;
-
-margin-top:8px;
-
-letter-spacing:12px;
-}
-
-
-/* ---------------- CEREMONY TITLE ---------------- */
-
-.details p:first-of-type{
-font-size:26px;
-font-weight:600;
-
-color:#b00020;
-
-margin-top:20px;
-margin-bottom:20px;
-}
-
-
-/* ---------------- DETAILS TEXT ---------------- */
-
-.details p{
-font-size:21px;
-color:#333;
-
-line-height:1.9;
-margin:8px 0;
-}
-
-
-/* ---------------- LOCATION STYLE ---------------- */
-
-.details p:nth-of-type(4),
-.details p:nth-of-type(5){
 font-size:22px;
-
-font-weight:500;
-
-letter-spacing:1px;
-}
-
-
-/* ---------------- MAP BUTTON ---------------- */
-
-.map-btn{
-
-display:inline-block;
-
-margin-top:30px;
-
-padding:14px 30px;
-
-font-size:18px;
-font-weight:600;
-
-color:#5a2a00;
-
-text-decoration:none;
-
-border-radius:30px;
-
-background:linear-gradient(
-135deg,
-#c89b3c,
-#f4e1a6,
-#c89b3c
-);
-
-box-shadow:
-0 8px 25px rgba(0,0,0,0.25);
-
-transition:all 0.3s ease;
-}
-
-
-/* BUTTON HOVER */
-
-.map-btn:hover{
-
-transform:translateY(-3px);
-
-box-shadow:
-0 14px 30px rgba(0,0,0,0.35);
-
-background:linear-gradient(
-135deg,
-#b07d2c,
-#e7c77a
-);
-
-}
-
-
-/* ---------------- GOLD DIVIDER ---------------- */
-
-.details .gold-divider{
-margin:40px auto;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-gap:15px;
-width:100%;
-max-width:500px;
-}
-
-.details .gold-divider::before,
-.details .gold-divider::after{
-
-content:"";
-flex:1;
-height:1px;
-
-background:linear-gradient(
-to right,
-transparent,
-#c8913a,
-transparent
-);
-
-}
-
-.details .gold-divider span{
-color:#c8913a;
-font-size:18px;
-}
-
-
-/* ---------------- MOBILE ---------------- */
-
-@media(max-width:768px){
-
-.details{
-padding:80px 20px;
-}
-
-.details h2{
-font-size:32px;
-}
-
-.details p{
-font-size:18px;
-}
-
-.map-btn{
-font-size:16px;
-padding:12px 24px;
-}
-
-}
-
-/* ---------------- MAP BUTTON ---------------- */
-
-.map-btn{
-display:inline-block;
-padding:10px 20px;
-background:#c62828;
-color:white;
-text-decoration:none;
-border-radius:6px;
-margin-top:15px;
-}
-
-
-/* ---------------- FOOTER ---------------- */
-
-.footer{
-padding:100px 20px;
-text-align:center;
-background:#5b0a11;
-font-size:22px;
-color:white;
-}
-
-
-/* ---------------- FADE ANIMATION ---------------- */
-
-@keyframes fadeIn{
-0%{
-opacity:0;
-transform:translateY(30px);
-}
-100%{
-opacity:1;
-transform:translateY(0);
-}
+color:#4a3a1a;
+line-height:1.8;
 }
 
 
@@ -561,69 +160,27 @@ transform:translateY(0);
 .family-section{
 padding:90px 20px;
 text-align:center;
-background:linear-gradient(180deg,#f8f3e6 0%,#efe6d3 100%);
+background:#f8f3e6;
 position:relative;
-overflow:hidden;
 }
-
-
-/* MANDALA BACKGROUND */
-
-.family-section::before{
-content:"";
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:700px;
-height:700px;
-background:url("/assets/mandala.jpg") center no-repeat;
-background-size:contain;
-opacity:0.08;
-z-index:0;
-}
-
-
-/* FAMILY TITLE */
 
 .family-section h2{
-position:relative;
-z-index:2;
 font-size:40px;
 color:#8b0000;
-margin-bottom:60px;
 letter-spacing:3px;
+margin-bottom:50px;
 font-family:"Cinzel", serif;
 }
-
-
-/* GOLD DIVIDER UNDER TITLE */
-
-.family-section h2::after{
-content:"✦ ✦ ✦";
-display:block;
-color:#c89b3c;
-font-size:16px;
-margin-top:10px;
-letter-spacing:10px;
-}
-
-
-/* FAMILY CONTAINER */
 
 .family-container{
 display:flex;
 justify-content:center;
 gap:80px;
 flex-wrap:wrap;
-position:relative;
-z-index:2;
 }
 
-
-/* FAMILY CARD */
-
 .family-block{
+
 padding:40px 35px;
 width:320px;
 border-radius:14px;
@@ -638,53 +195,12 @@ background:linear-gradient(
 box-shadow:0 10px 35px rgba(0,0,0,0.18);
 transition:0.4s;
 color:#3a2a00;
-position:relative;
 }
-
-
-/* GOLD SHIMMER BORDER */
-
-.family-block::before{
-content:"";
-position:absolute;
-top:-2px;
-left:-2px;
-right:-2px;
-bottom:-2px;
-border-radius:16px;
-
-background:linear-gradient(
-120deg,
-#c89b3c,
-#f7e6a2,
-#c89b3c,
-#f7e6a2
-);
-
-background-size:300% 300%;
-animation:goldShimmer 6s linear infinite;
-z-index:-1;
-}
-
-
-/* SHIMMER ANIMATION */
-
-@keyframes goldShimmer{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-
-/* HOVER EFFECT */
 
 .family-block:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 box-shadow:0 18px 45px rgba(0,0,0,0.25);
 }
-
-
-/* GROOM / BRIDE TITLE */
 
 .family-block h3{
 color:#8b0000;
@@ -694,18 +210,12 @@ margin-bottom:10px;
 font-family:"Cinzel", serif;
 }
 
-
-/* NAME */
-
 .family-block .name{
 font-size:28px;
 font-family:"Brush Script MT", cursive;
 color:#c62828;
 margin:10px 0 18px 0;
 }
-
-
-/* TEXT */
 
 .family-block p{
 font-size:18px;
@@ -719,30 +229,103 @@ color:#000;
 }
 
 
-/* ---------------- GOLDEN DIVIDER ---------------- */
+/* ---------------- WEDDING DETAILS SECTION ---------------- */
 
-.gold-divider{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:15px;
-margin:60px auto;
-width:100%;
-max-width:500px;
+.details{
+
+padding:110px 20px;
+text-align:center;
+
+background:linear-gradient(
+180deg,
+#fffdf7,
+#f8f3e6,
+#efe6d3
+);
+
+font-family:"Cinzel", serif;
 position:relative;
+overflow:hidden;
 }
 
-.gold-divider::before,
-.gold-divider::after{
+.details::before{
 content:"";
-flex:1;
-height:1px;
-background:linear-gradient(to right, transparent, #c8913a, transparent);
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:600px;
+height:600px;
+background:url('../../assets/mandala.jpg') center no-repeat;
+background-size:contain;
+opacity:0.05;
 }
 
-.gold-divider span{
-color:#c8913a;
+.details h2{
+font-size:40px;
+color:#8b0000;
+letter-spacing:4px;
+margin-top:30px;
+}
+
+.details h2::after{
+content:"✦ ✦ ✦";
+display:block;
+color:#c89b3c;
+font-size:16px;
+margin-top:8px;
+letter-spacing:10px;
+}
+
+.details p{
+font-size:20px;
+color:#3a2a00;
+line-height:1.9;
+margin:8px 0;
+}
+
+
+/* MAP BUTTON */
+
+.map-btn{
+
+display:inline-block;
+margin-top:25px;
+
+padding:12px 26px;
+
+background:linear-gradient(
+135deg,
+#c89b3c,
+#f4e1a6
+);
+
+color:#5a2a00;
+
+text-decoration:none;
+border-radius:25px;
+
 font-size:18px;
+font-weight:600;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.map-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(0,0,0,0.3);
+}
+
+
+/* ---------------- FOOTER ---------------- */
+
+.footer{
+padding:100px 20px;
+text-align:center;
+background:#5b0a11;
+font-size:22px;
+color:white;
 }
 
 
@@ -754,30 +337,16 @@ font-size:18px;
 top:30%;
 }
 
-.hero-image{
-background-attachment:scroll;
-background-position:center top;
-min-height:70vh;
-}
-
 .couple-names span{
-font-size:22px;
+font-size:26px;
 }
 
 .invite-section{
-font-size:20px;
+padding:80px 20px;
 }
 
-.ganesh{
-width:180px;
-}
-
-.details{
-font-size:18px;
-}
-
-.footer{
-font-size:18px;
+.invite-section h1{
+font-size:36px;
 }
 
 .family-container{
@@ -789,92 +358,16 @@ width:90%;
 max-width:320px;
 }
 
-.family-section h2{
+.details{
+padding:80px 20px;
+}
+
+.details h2{
 font-size:32px;
 }
 
-}
-
-.petals{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-z-index:1;
-}
-
-.petals span{
-position:absolute;
-display:block;
-width:18px;
-height:18px;
-background:#f7c5c5;
-border-radius:50% 50% 50% 0;
-opacity:0.7;
-animation:petalFall 12s linear infinite;
-}
-
-.petals span:nth-child(1){left:10%; animation-duration:10s;}
-.petals span:nth-child(2){left:30%; animation-duration:12s;}
-.petals span:nth-child(3){left:50%; animation-duration:9s;}
-.petals span:nth-child(4){left:70%; animation-duration:14s;}
-.petals span:nth-child(5){left:90%; animation-duration:11s;}
-
-@keyframes petalFall{
-0%{transform:translateY(-50px) rotate(0deg);}
-100%{transform:translateY(100vh) rotate(360deg);}
-}
-.countdown{
-text-align:center;
-padding:80px 20px;
-background:#fff8e7;
-}
-
-.timer{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:20px;
-}
-
-.timer div{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
+.details p{
 font-size:18px;
 }
 
-.timer span{
-display:block;
-font-size:32px;
-color:#8b0000;
-font-weight:bold;
-}
-.invite-section h1{
-position:relative;
-}
-
-.invite-section h1::before{
-content:"";
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:200px;
-height:200px;
-
-background:radial-gradient(circle,#f7e7a0 0%,transparent 70%);
-
-opacity:0.3;
-animation:sparkle 4s infinite ease-in-out;
-}
-
-@keyframes sparkle{
-0%{opacity:0.2; transform:translate(-50%,-50%) scale(1);}
-50%{opacity:0.5; transform:translate(-50%,-50%) scale(1.2);}
-100%{opacity:0.2; transform:translate(-50%,-50%) scale(1);}
 }
