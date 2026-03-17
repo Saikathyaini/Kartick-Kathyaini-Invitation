@@ -5,7 +5,7 @@ import { KartickKatyComponent } from './kartick-katy/kartick-katy.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,KartickKatyComponent],
+  imports: [KartickKatyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
