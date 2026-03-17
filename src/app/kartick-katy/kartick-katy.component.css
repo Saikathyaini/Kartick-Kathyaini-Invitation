@@ -233,6 +233,9 @@ transform:translateY(0);
 /* ---------------- MOBILE RESPONSIVE ---------------- */
 
 @media(max-width:768px){
+    .hero-text{
+        top: 30%;
+    }
 
 .hero-image{
 background-attachment:scroll;
