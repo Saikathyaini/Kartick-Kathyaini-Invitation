@@ -177,19 +177,221 @@ transform:scale(1);
 
 
 /* ---------------- DETAILS SECTION ---------------- */
+/* ---------------- WEDDING DETAILS SECTION ---------------- */
 
 .details{
-padding:100px 20px;
+padding:110px 20px;
 text-align:center;
-background:#fff8e7;
-font-size:20px;
+
+background:linear-gradient(
+135deg,
+#f9e7a4,
+#e5c46b,
+#f9e7a4
+);
+
+font-family:"Cinzel", serif;
+position:relative;
+overflow:hidden;
+}
+
+/* subtle royal pattern */
+
+.details::before{
+content:"";
+position:absolute;
+
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+width:600px;
+height:600px;
+
+background:url("/assets/mandala.jpg") center no-repeat;
+background-size:contain;
+
+opacity:0.06;
+pointer-events:none;
+}
+
+
+/* ---------------- SECTION TITLES ---------------- */
+
+.details h2{
+font-size:40px;
+color:#8b0000;
+
+letter-spacing:4px;
+
+margin-top:30px;
+margin-bottom:20px;
+
+position:relative;
+}
+
+
+/* GOLD DECORATION */
+
+.details h2::after{
+content:"✦ ✦ ✦";
+display:block;
+
+color:#c89b3c;
+
+font-size:18px;
+
+margin-top:8px;
+
+letter-spacing:12px;
+}
+
+
+/* ---------------- CEREMONY TITLE ---------------- */
+
+.details p:first-of-type{
+font-size:26px;
+font-weight:600;
+
+color:#b00020;
+
+margin-top:20px;
+margin-bottom:20px;
+}
+
+
+/* ---------------- DETAILS TEXT ---------------- */
+
+.details p{
+font-size:21px;
+color:#333;
+
+line-height:1.9;
+margin:8px 0;
+}
+
+
+/* ---------------- LOCATION STYLE ---------------- */
+
+.details p:nth-of-type(4),
+.details p:nth-of-type(5){
+font-size:22px;
+
+font-weight:500;
+
+letter-spacing:1px;
+}
+
+
+/* ---------------- MAP BUTTON ---------------- */
+
+.map-btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 30px;
+
+font-size:18px;
+font-weight:600;
+
+color:#5a2a00;
+
+text-decoration:none;
+
+border-radius:30px;
+
+background:linear-gradient(
+135deg,
+#c89b3c,
+#f4e1a6,
+#c89b3c
+);
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.25);
+
+transition:all 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.map-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 14px 30px rgba(0,0,0,0.35);
+
+background:linear-gradient(
+135deg,
+#b07d2c,
+#e7c77a
+);
+
+}
+
+
+/* ---------------- GOLD DIVIDER ---------------- */
+
+.details .gold-divider{
+margin:40px auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:15px;
+width:100%;
+max-width:500px;
+}
+
+.details .gold-divider::before,
+.details .gold-divider::after{
+
+content:"";
+flex:1;
+height:1px;
+
+background:linear-gradient(
+to right,
+transparent,
+#c8913a,
+transparent
+);
+
+}
+
+.details .gold-divider span{
+color:#c8913a;
+font-size:18px;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px){
+
+.details{
+padding:80px 20px;
 }
 
 .details h2{
-color:#8b0000;
-margin-bottom:30px;
+font-size:32px;
 }
 
+.details p{
+font-size:18px;
+}
+
+.map-btn{
+font-size:16px;
+padding:12px 24px;
+}
+
+}
 
 /* ---------------- MAP BUTTON ---------------- */
 
