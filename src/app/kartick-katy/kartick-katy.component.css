@@ -95,32 +95,38 @@ opacity:1;
 transform:translate(-50%,-50%);
 }
 }
+.hero-text h3{
+font-size:26px;
+color:#f5e7b8;
 
+text-shadow:
+0px 2px 6px rgba(0,0,0,0.7);
+
+margin-bottom:10px;
+}
 
 /* ---------------- COUPLE NAMES ---------------- */
-
 .couple-names{
 display:flex;
 justify-content:center;
 align-items:center;
-gap:10px;
+gap:12px;
+letter-spacing:1px;
 }
-
 .couple-names span{
 font-family:'Brush Script MT', cursive;
-font-size:28px;
-color:#eae3bb;
+font-size:32px;
+color:#f5e7b8;
+
+text-shadow: 
+0px 2px 6px rgba(0,0,0,0.6);
+}
+.heart{
+font-size:26px;
+color:#f5e7b8;
 
 text-shadow:
--2px -2px 0 #000,
-2px -2px 0 #000,
--2px 2px 0 #000,
-2px 2px 0 #000;
-}
-
-.heart{
-font-size:22px;
-color:#eae3bb;
+0px 2px 6px rgba(0,0,0,0.6);
 }
 
 
