@@ -10,14 +10,20 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './kartick-katy.component.css'
 })
 export class KartickKatyComponent {
-
 opened = false;
+opening = false;
 
-@ViewChild('bgMusic') music!: ElementRef;
+openInvitation() {
 
-openInvitation(){
-  this.opened = true;
-  this.music.nativeElement.play();
+  this.opening = true;
+
+  const music = document.querySelector("audio") as HTMLAudioElement;
+  music.play();
+
+  setTimeout(()=>{
+    this.opened = true;
+  },1500);
+
 }
 
 }
