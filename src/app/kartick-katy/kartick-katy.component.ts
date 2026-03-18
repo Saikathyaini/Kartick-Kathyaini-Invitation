@@ -8,18 +8,24 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
   templateUrl: './kartick-katy.component.html',
   styleUrl: './kartick-katy.component.css'
 })
-export class KartickKatyComponent implements AfterViewInit {
+export class KartickKatyComponent  {
 
   @ViewChild('bgMusic') music!: ElementRef<HTMLAudioElement>;
 
-  ngAfterViewInit() {
-    const audio = this.music.nativeElement;
+showMusicHint = true;
 
-    audio.volume = 0.5;   // softer music
+toggleMusic(){
 
-    audio.play().catch(() => {
-      console.log("Autoplay blocked by browser");
-    });
-  }
+const audio = this.music.nativeElement;
+
+if(audio.paused){
+audio.play();
+} else {
+audio.pause();
+}
+
+this.showMusicHint = false;
+
+}
 
 }
