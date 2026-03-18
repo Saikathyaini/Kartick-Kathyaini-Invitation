@@ -10,10 +10,16 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 })
 export class KartickKatyComponent implements AfterViewInit {
 
-  @ViewChild('bgMusic') music!: ElementRef;
+  @ViewChild('bgMusic') music!: ElementRef<HTMLAudioElement>;
 
-  ngAfterViewInit(){
-    this.music.nativeElement.play().catch(()=>{});
+  ngAfterViewInit() {
+    const audio = this.music.nativeElement;
+
+    audio.volume = 0.5;   // softer music
+
+    audio.play().catch(() => {
+      console.log("Autoplay blocked by browser");
+    });
   }
 
 }

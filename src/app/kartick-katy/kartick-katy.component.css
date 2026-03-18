@@ -211,14 +211,15 @@ font-family:"Cinzel", serif;
 }
 
 .family-block .name{
-font-size:28px;
+font-size:48px;
 font-family:"Brush Script MT", cursive;
-color:#c62828;
+color:#973939;
 margin:10px 0 18px 0;
+font-weight: bold;
 }
 
 .family-block p{
-font-size:18px;
+font-size:20px;
 line-height:1.6;
 color:#333;
 }
@@ -370,4 +371,17 @@ font-size:32px;
 font-size:18px;
 }
 
+}
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:#c89b3c;
+border:none;
+color:white;
+font-size:20px;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
