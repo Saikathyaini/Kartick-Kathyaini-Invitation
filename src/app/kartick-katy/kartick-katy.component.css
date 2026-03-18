@@ -330,6 +330,9 @@ background:#5b0a11;
 font-size:22px;
 color:white;
 }
+.footer p{
+    font-weight: bold;
+}
 
 
 /* ---------------- MOBILE RESPONSIVE ---------------- */
