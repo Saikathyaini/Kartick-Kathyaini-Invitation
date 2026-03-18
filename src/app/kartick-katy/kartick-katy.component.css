@@ -77,7 +77,7 @@ text-shadow:2px 2px 10px black;
 
 .couple-names{
 display:flex;
-justify-content:center;
+justify-content:top;
 align-items:center;
 gap:12px;
 }
@@ -86,9 +86,11 @@ gap:12px;
 font-family:'Brush Script MT', cursive;
 font-size:34px;
 color:#f5e7b8;
-text-shadow:0 3px 6px rgba(0,0,0,0.6);
-}
 
+text-shadow:
+0 2px 6px rgba(0,0,0,0.8),
+0 4px 12px rgba(0,0,0,0.6);
+}
 .heart{
 font-size:26px;
 color:#f5e7b8;
