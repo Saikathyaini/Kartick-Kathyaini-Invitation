@@ -28,15 +28,13 @@
 <div  class="main-page">
 
 
-<div class="music-popup" *ngIf="showMusicHint">
-  Tap here 
-</div>
+
 
   <!-- HERO SECTION -->
 
   <section class="hero-image">
-    <button class="music-btn" (click)="music.nativeElement.paused ? music.nativeElement.play() : music.nativeElement.pause()">
-🎵
+ <button class="music-btn" (click)="toggleMusic()">
+Tap here 🎵
 </button>
 
 
